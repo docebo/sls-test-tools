@@ -12,7 +12,7 @@ export default {
       return testResult("There are no events present.", false);
     }
 
-    const parsedBody = JSON.parse(Events.Messages[0].Body) as {
+    const parsedBody = JSON.parse(Events.Messages[0].Body!) as {
       source?: string;
     };
 

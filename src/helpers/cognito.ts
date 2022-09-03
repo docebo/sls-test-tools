@@ -114,6 +114,7 @@ const createUser = async (
     Object.entries(createUserInput.customAttributes).forEach(([key, val]) => {
       attributesArg.push({
         Name: "custom:" + key,
+        // @ts-ignore asdfgrthejyrhgeagfwaegesrgesgrthtwrhrethr
         Value: jsf.generate({ type: val }),
       });
     });

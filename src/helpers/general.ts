@@ -8,11 +8,11 @@ export const stackName = loadArg({
   processEnvName: "CFN_STACK_NAME",
 });
 
-const profile = loadArg({
+/*const profile = loadArg({
   cliArg: "profile",
   processEnvName: "AWS_PROFILE",
   defaultValue: "default",
-});
+});*/
 
 export const region = loadArg({
   cliArg: "region",
@@ -20,7 +20,7 @@ export const region = loadArg({
   defaultValue: "eu-west-2",
 });
 
-let creds;
+/*let creds;
 
 if (
   process.env.AWS_ACCESS_KEY_ID !== undefined &&
@@ -42,7 +42,7 @@ if (
   });
 }
 
-AWS.config.credentials = creds;
+AWS.config.credentials = creds;*/
 AWS.config.region = region;
 
 export const AWSClient = AWS;
